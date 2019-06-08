@@ -18,15 +18,16 @@ export default {
   },
   mounted(){
     
-    let iframe = document.createElement('iframe');
-    iframe.src = '../static/test.html'
-    document.body.appendChild(iframe)
   }
 }
-</script>
 
-<style lang='scss'>
-#app {
-  
+
+
+</script>
+<style lang='less'>
+#app{
+  h1{
+    color:red
+  }
 }
 </style>

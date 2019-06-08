@@ -3,18 +3,43 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>chuanshui_h5</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,maximum-scale=1, shrink-to-fit=no,user-scalable=no"> -->
+    <link rel="icon" href="<%= BASE_URL %>logo.png">
+    <title>川水</title>
+    <script src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+    <script>
+          (function (doc, win) {
+            var docEle = doc.documentElement,
+            dpr=Math.min(win.devicePixelRatio, 3);
+            scale = 1 / dpr,
+
+            resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            docEle.dataset.dpr = dpr;
+
+            var metaEle = doc.createElement('meta');
+            metaEle.name = 'viewport';
+            metaEle.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ',width=device-width,shrink-to-fit=no,user-scalable=no';
+            docEle.firstElementChild.appendChild(metaEle);
+        
+            var recalCulate = function(){
+                var width = docEle.clientWidth;
+                if (width / dpr > 640) {
+                    width = 640 * dpr;
+                }
+                docEle.style.fontSize = 100 * (width / 750) + 'px';
+            };
+
+            recalCulate();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvent, recalCulate, false);
+        })(document, window);
+    </script>
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but chuanshui_h5 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>We're sorry but sgq doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
 </html>
-<script>
-  
-</script>
