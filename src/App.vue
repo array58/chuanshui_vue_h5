@@ -5,6 +5,7 @@
 </template>
 
 <script>
+  import {testStore} from '@/assets/js/hybrid.js';
   export default {
     name: 'app'
   }

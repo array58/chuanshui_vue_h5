@@ -6,19 +6,18 @@ import createPersistedState from 'vuex-persistedstate';
 
 import moduleA from "./modules/ma";
 import moduleB from "./modules/mb";
+import device from "./modules/device";
+
 
 const store = new Vuex.Store({
     modules:{
+        device,
         moduleA,
         moduleB
     },
     plugins:[
         createPersistedState({
-            storage:window.localStorage,
-            reducer(val){
-                console.log(val)
-                return val
-            }
+            storage:window.localStorage
         })
     ]
 });

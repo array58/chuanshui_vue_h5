@@ -16,6 +16,9 @@ const moduleA = {
     getters: {
       doubleCount2 (state) {
         return state.count * 2
+      },
+      getterTest(state){
+        return `getter${state.mark}`
       }
     }
   }
