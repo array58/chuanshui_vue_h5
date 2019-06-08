@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,maximum-scale=1, shrink-to-fit=no,user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,maximum-scale=1, shrink-to-fit=no,user-scalable=no">
     <link rel="icon" href="<%= BASE_URL %>logo.png">
     <title>川水</title>
     <script src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
@@ -15,11 +15,6 @@
 
             resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
             docEle.dataset.dpr = dpr;
-
-            var metaEle = doc.createElement('meta');
-            metaEle.name = 'viewport';
-            metaEle.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ',width=device-width,shrink-to-fit=no,user-scalable=no';
-            docEle.firstElementChild.appendChild(metaEle);
         
             var recalCulate = function(){
                 var width = docEle.clientWidth;
