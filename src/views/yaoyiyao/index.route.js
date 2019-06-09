@@ -1,10 +1,10 @@
 export default [
     {
-        path:'/page_2',
-        name:'page_2',
+        path:'/yaoyiyao',
+        name:'yaoyiyao',
         component:()=>import('./index.vue'),
         meta:{
-            title:'page2'
+            title:'摇一摇'
         }
     }
 ]
