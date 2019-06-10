@@ -3,7 +3,6 @@ import vueRouter from 'vue-router';
 Vue.use(vueRouter);
 
 import views from '@/views/views.route'
-import { from } from 'rxjs';
 
 const router = new vueRouter({
     mode:'hash',
